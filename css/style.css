@@ -451,6 +451,22 @@ button {
 .point-item__text h3 {
   margin: 0 0 25px;
   font-size: 30px;
+  white-space: nowrap;
+}
+
+.point-item__text h3 span {
+  display: inline;
+  margin-bottom: 0;
+  font-size: inherit;
+  letter-spacing: 0;
+}
+
+.point-item__text h3 span::after {
+  display: none;
+}
+
+.point-heading__sp {
+  display: none !important;
 }
 
 .point-item__text p {
@@ -1783,6 +1799,15 @@ button {
   .point-item__text h3 {
     font-size: 26px;
     line-height: 1.4;
+    white-space: normal;
+  }
+
+  .point-heading__pc {
+    display: none !important;
+  }
+
+  .point-heading__sp {
+    display: inline !important;
   }
 
   .point-item__text p {

@@ -1,4 +1,4 @@
-const LINE_URL = "https://line.me/";
+const LINE_URL = "https://line.me/R/ti/p/@522noows";
 
 const body = document.body;
 const menuButton = document.querySelector(".menu-button");
@@ -57,7 +57,7 @@ if (staffList) {
   if (data.length) {
     staffList.innerHTML = data.map((staff) => `
       <article class="swiper-slide staff-card">
-        <p class="staff-card__name">${staff.nameJa || ""}<small>${staff.nameEn || ""}</small></p>
+        <h3 class="staff-card__name">${staff.nameJa || ""}<small>${staff.nameEn || ""}</small></h3>
         <figure class="image-frame">
           <img src="${staff.image || "images/staff/staff-01.jpg"}" alt="${staff.nameJa || "スタイリスト"}の写真" width="420" height="340">
         </figure>
@@ -65,9 +65,9 @@ if (staffList) {
           <a href="${staff.instagramUrl || "#"}" aria-label="${staff.nameJa || "スタイリスト"}のInstagram" target="_blank" rel="noopener noreferrer">
             <img src="images/staff/instagram-icon.png" alt="" width="42" height="42">
           </a>
-          <a href="${staff.externalUrl || "#"}" aria-label="${staff.nameJa || "スタイリスト"}の外部リンク" target="_blank" rel="noopener noreferrer">
+          ${staff.externalUrl ? `<a href="${staff.externalUrl}" aria-label="${staff.nameJa || "スタイリスト"}の外部リンク" target="_blank" rel="noopener noreferrer">
             <img src="images/staff/external-link-icon-fixed.png" alt="" width="42" height="42">
-          </a>
+          </a>` : ""}
         </div>
         <p class="staff-card__text">${staff.description || ""}</p>
       </article>
@@ -78,7 +78,8 @@ if (staffList) {
 
   if (typeof Swiper !== "undefined" && data.length) {
     new Swiper(".staff-swiper", {
-      loop: true,
+      loop: data.length > 3,
+      watchOverflow: true,
       keyboard: { enabled: true },
       slidesPerView: 1.15,
       spaceBetween: 18,
@@ -96,7 +97,7 @@ if (staffList) {
           spaceBetween: 24
         },
         980: {
-          slidesPerView: 3.35,
+          slidesPerView: 3,
           spaceBetween: 34
         }
       }

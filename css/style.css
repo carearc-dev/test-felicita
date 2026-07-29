@@ -24,8 +24,8 @@ body {
   margin: 0;
   color: var(--color-text);
   font-family: var(--font-ja);
-  font-size: 15px;
-  line-height: 1.9;
+  font-size: 16px;
+  line-height: 1.875;
   letter-spacing: 0;
   background: #fff;
 }
@@ -69,7 +69,7 @@ button {
 .site-header__inner {
   display: flex;
   align-items: center;
-  gap: 28px;
+  gap: 22px;
   width: min(100%, 1320px);
   min-height: 68px;
   margin: 0 auto;
@@ -83,14 +83,24 @@ button {
   letter-spacing: .08em;
 }
 
+.site-logo img {
+  display: block;
+  width: clamp(148px, 17vw, 228px);
+  height: auto;
+}
+
 .site-nav {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  gap: clamp(14px, 1.8vw, 28px);
+  gap: clamp(10px, 1.35vw, 24px);
   width: 100%;
-  font-size: 12px;
+  font-size: 13px;
   color: #4d4d4d;
+}
+
+.site-nav a {
+  white-space: nowrap;
 }
 
 .site-nav a[href="#top"],
@@ -105,6 +115,8 @@ button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: 14px;
+  box-sizing: border-box;
   min-width: 250px;
   min-height: 58px;
   padding: 13px 30px;
@@ -130,21 +142,19 @@ button {
   flex: 0 0 auto;
   width: 54px;
   height: auto;
-  margin-right: 14px;
   object-fit: contain;
 }
 
 .line-button--small {
-  min-width: 188px;
+  min-width: 204px;
   min-height: 46px;
   padding: 8px 18px;
-  font-size: 14px;
+  font-size: 15px;
 }
 
 .line-button--small img {
   width: 40px;
   height: auto;
-  margin-right: 10px;
 }
 
 .site-nav .site-nav__line {
@@ -230,6 +240,7 @@ button {
   margin: 0;
   font-size: clamp(22px, 3vw, 32px);
   line-height: 1.5;
+  text-wrap: balance;
 }
 
 .image-frame {
@@ -292,7 +303,7 @@ button {
 
 .fv__lead {
   margin: 0 0 18px;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .fv h1 {
@@ -323,6 +334,10 @@ button {
   box-shadow: 0 0 0 1px rgba(0, 0, 0, .04);
 }
 
+.fv__photo img {
+  object-fit: cover;
+}
+
 .fv__photo--main {
   top: 0;
   left: 4%;
@@ -330,11 +345,19 @@ button {
   aspect-ratio: 420 / 520;
 }
 
+.fv__photo--main img {
+  object-position: 36% 50%;
+}
+
 .fv__photo--sub01 {
   top: 26%;
   right: 0;
   width: 48%;
   aspect-ratio: 320 / 410;
+}
+
+.fv__photo--sub01 img {
+  object-position: 18% 50%;
 }
 
 .fv__photo--sub02 {
@@ -366,13 +389,13 @@ button {
 
 .case-item h3 {
   margin: 0 0 10px;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .case-item p {
   margin: 0;
-  font-size: 11px;
-  line-height: 1.8;
+  font-size: 15px;
+  line-height: 1.75;
 }
 
 .point-section {
@@ -470,10 +493,10 @@ button {
 }
 
 .point-item__text p {
-  max-width: 520px;
+  max-width: 540px;
   margin: 0;
-  font-size: 14px;
-  line-height: 2;
+  font-size: 16px;
+  line-height: 1.875;
 }
 
 .point-item__image {
@@ -481,10 +504,22 @@ button {
   z-index: 2;
   align-self: end;
   justify-self: end;
-  width: min(100%, 430px);
+  width: min(100%, 470px);
   aspect-ratio: 1.1 / 1;
   margin-right: clamp(-60px, -4vw, -24px);
   box-shadow: 0 10px 28px rgba(0, 0, 0, .06);
+}
+
+.point-item__image--01 img {
+  object-position: 54% 45%;
+}
+
+.point-item__image--02 img {
+  object-position: 35% 52%;
+}
+
+.point-item__image--03 img {
+  object-position: 52% 54%;
 }
 
 .point-item--reverse .point-item__image {
@@ -534,10 +569,14 @@ button {
 }
 
 .about-artist__image--main {
-  top: 0;
-  left: 0;
+  top: 20px;
+  left: -39px;
   width: 73%;
   aspect-ratio: 363 / 255;
+}
+
+.about-artist__image--main img {
+  object-position: 58% 48%;
 }
 
 .about-artist__image--sub {
@@ -545,6 +584,10 @@ button {
   bottom: 0;
   width: 72%;
   aspect-ratio: 363 / 255;
+}
+
+.about-artist__image--sub img {
+  object-position: 42% 46%;
 }
 
 .about-artist__text {
@@ -599,7 +642,8 @@ button {
 
 .work-card p {
   margin: 0;
-  font-size: 12px;
+  font-size: 15px;
+  line-height: 1.75;
 }
 
 .works-section {
@@ -771,6 +815,30 @@ button {
   aspect-ratio: 130 / 195;
 }
 
+.works-collage__image--l01 img {
+  object-position: 56% 45%;
+}
+
+.works-collage__image--l02 img {
+  object-position: 38% 48%;
+}
+
+.works-collage__image--l03 img {
+  object-position: 56% 54%;
+}
+
+.works-collage__image--r01 img {
+  object-position: 50% 48%;
+}
+
+.works-collage__image--r02 img {
+  object-position: 48% 58%;
+}
+
+.works-collage__image--r03 img {
+  object-position: 42% 34%;
+}
+
 .works-section__note {
   margin: clamp(66px, 7vw, 92px) 0 0;
   color: #333;
@@ -841,7 +909,9 @@ button {
   }
 
   .works-collage__image--l03 {
-    bottom: 28px;
+    top: auto;
+    left: 22%;
+    bottom: 88px;
     width: min(124px, 40%);
   }
 
@@ -852,13 +922,17 @@ button {
   }
 
   .works-collage__image--r02 {
-    top: 230px;
+    top: 210px;
+    left: 34%;
+    bottom: auto;
     width: min(84px, 28%);
   }
 
   .works-collage__image--r03 {
-    bottom: -70px;
-    width: min(112px, 34%);
+    top: auto;
+    right: -12%;
+    bottom: -90px;
+    width: min(112px, 44%);
   }
 }
 
@@ -945,7 +1019,7 @@ button {
   position: absolute;
   z-index: 1;
   width: 160px;
-  aspect-ratio: 1 / 1.2;
+  aspect-ratio: 4 / 3;
 }
 
 .solution__image--left {
@@ -956,6 +1030,14 @@ button {
 .solution__image--right {
   top: 0;
   right: 0;
+}
+
+.solution__image--left img {
+  object-position: 50% 58%;
+}
+
+.solution__image--right img {
+  object-position: 32% 48%;
 }
 
 .price-grid {
@@ -979,6 +1061,8 @@ button {
 .price-card table {
   width: 100%;
   border-collapse: collapse;
+  font-size: 16px;
+  line-height: 1.75;
 }
 
 .price-card th,
@@ -994,8 +1078,9 @@ button {
 
 .price-note {
   width: min(100%, var(--max-width));
-  margin: 14px auto 0;
-  font-size: 12px;
+  margin: 18px auto 0;
+  font-size: 14px;
+  line-height: 1.85;
 }
 
 .slider-section {
@@ -1057,6 +1142,10 @@ button {
   margin-top: -2px;
 }
 
+.staff-card .image-frame img {
+  object-position: 50% 36%;
+}
+
 .staff-card__actions {
   position: relative;
   z-index: 2;
@@ -1092,8 +1181,8 @@ button {
 
 .staff-card__text {
   margin: 22px 6px 0;
-  font-size: 15px;
-  line-height: 1.9;
+  font-size: 16px;
+  line-height: 1.85;
 }
 
 @media (max-width: 1100px) {
@@ -1190,8 +1279,8 @@ button {
   display: grid;
   place-items: center;
   min-height: 76px;
-  font-size: 13px;
-  line-height: 1.35;
+  font-size: 15px;
+  line-height: 1.45;
   text-align: center;
   border-right: 2px solid #ffd1e6;
 }
@@ -1204,12 +1293,13 @@ button {
 
 .flow-item h3 {
   margin: 0 0 6px;
-  font-size: 17px;
+  font-size: 18px;
 }
 
 .flow-item p {
   margin: 0;
-  font-size: 12px;
+  font-size: 16px;
+  line-height: 1.75;
 }
 
 .faq-item {
@@ -1371,33 +1461,52 @@ button {
 .final-cta__box h2 {
   margin: 0 0 18px;
   font-size: clamp(22px, 3vw, 30px);
+  line-height: 1.55;
+  text-wrap: balance;
 }
 
 .final-cta__box p {
   margin: 0 0 28px;
+  line-height: 1.9;
+}
+
+.final-cta__sp {
+  display: none;
 }
 
 .site-footer {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 78px var(--side) 36px;
-  color: #fff;
+  color: var(--color-text);
   text-align: center;
-  background: var(--color-dark);
+  background: #abadb4;
 }
 
 .site-logo--footer {
   display: inline-block;
   margin-bottom: 48px;
-  color: #fff;
+  color: var(--color-text);
+  text-align: center;
+}
+
+.site-logo--footer img {
+  display: block;
+  width: min(100%, 300px);
+  height: auto;
+  margin: 0 auto;
 }
 
 .footer-nav {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: 22px;
-  width: min(100%, 420px);
+  gap: 18px 24px;
+  width: min(100%, 520px);
   margin: 0 auto 62px;
 }
 
@@ -1410,14 +1519,15 @@ button {
   padding: 7px 18px;
   font-size: 16px;
   line-height: 1.3;
-  border: 1px solid rgba(255, 255, 255, .82);
+  color: var(--color-text);
+  border: 1px solid var(--color-text);
   border-radius: 2px;
 }
 
 .footer-copy {
   margin: 0;
-  color: rgba(255, 255, 255, .86);
-  font-size: 16px;
+  color: var(--color-text);
+  font-size: 10px;
   letter-spacing: .02em;
 }
 
@@ -1445,6 +1555,27 @@ button {
 }
 
 @media (max-width: 1024px) {
+  .site-logo img {
+    width: clamp(150px, 25vw, 210px);
+  }
+
+  .about-artist__inner {
+    grid-template-columns: 1fr;
+    gap: 100px;
+  }
+
+  .about-artist__image--main {
+    top: -78px;
+    left: -112px;
+    width: 76%;
+  }
+
+  .about-artist__image--sub {
+    right: -74px;
+    bottom: -26px;
+    width: 74%;
+  }
+
   .point-item__text h3 {
     font-size: 28px;
   }
@@ -1568,7 +1699,7 @@ button {
   .company-list {
     grid-template-columns: 120px 1fr;
     gap: 18px 28px;
-    font-size: 14px;
+    font-size: 15px;
   }
 
   .fv__visual {
@@ -1598,12 +1729,13 @@ button {
 
   .about-artist__inner {
     grid-template-columns: 1fr;
-    gap: 48px;
+    gap: 100px;
   }
 
   .about-artist__visual {
     width: min(100%, 680px);
     margin: 0 auto;
+    margin-top: 70px;
   }
 
   .about-artist__text {
@@ -1994,7 +2126,8 @@ button {
 
 @media (max-width: 720px) {
   body {
-    font-size: 14px;
+    font-size: 15px;
+    line-height: 1.85;
   }
 
   .site-header__inner {
@@ -2047,11 +2180,17 @@ button {
   .line-button {
     width: 100%;
     min-width: 0;
+    max-width: 100%;
+    min-height: 62px;
+    padding: 13px 16px;
+    gap: 12px;
+    font-size: clamp(15px, 4vw, 17px);
+    white-space: nowrap;
   }
 
   .line-button img {
-    width: 58px;
-    margin-right: 12px;
+    width: 54px;
+    max-width: 18vw;
   }
 
   .line-button--small img {
@@ -2071,11 +2210,23 @@ button {
     min-height: 390px;
   }
 
+  .fv__photo--main img {
+    object-position: 34% 50%;
+  }
+
+  .fv__photo--sub01 img {
+    object-position: 16% 50%;
+  }
+
   .case-list,
   .works-grid,
   .price-grid,
   .concerns-grid {
     grid-template-columns: 1fr;
+  }
+
+  .case-list {
+    width: min(86%, 860px);
   }
 
   .concerns-grid p {
@@ -2131,8 +2282,8 @@ button {
 
   .point-item__text p {
     max-width: 100%;
-    font-size: 14px;
-    line-height: 2;
+    font-size: 15px;
+    line-height: 1.9;
   }
 
   .about-artist {
@@ -2156,11 +2307,24 @@ button {
   }
 
   .about-artist__image--main {
+    top: 0;
+    left: 0;
     width: 78%;
   }
 
+  .about-artist__image--main img {
+    object-position: 55% 50%;
+  }
+
   .about-artist__image--sub {
-    width: 76%;
+    right: -20px;
+    bottom: 0;
+    width: 72%;
+    aspect-ratio: 363 / 255;
+  }
+
+  .about-artist__image--sub img {
+    object-position: 39% 48%;
   }
 
   .about-artist__text {
@@ -2366,6 +2530,7 @@ button {
   .solution__image {
     position: relative;
     width: 38%;
+    aspect-ratio: 4 / 3;
   }
 
   .solution__image--left {
@@ -2374,7 +2539,7 @@ button {
   }
 
   .solution__image--right {
-    top: -103px;
+    top: -73px;
     right: -16px;
     margin-left: auto;
     margin-bottom: -22px;
@@ -2414,7 +2579,7 @@ button {
   .staff-card__name small {
     display: inline-block;
     margin-left: 5px;
-    font-size: 12px;
+    font-size: 13px;
   }
 
   .staff-card__actions a {
@@ -2426,7 +2591,7 @@ button {
   .staff-card__text {
     margin-right: 4px;
     margin-left: 4px;
-    font-size: 13px;
+    font-size: 15px;
     line-height: 1.85;
   }
 
@@ -2468,6 +2633,11 @@ button {
   .flow-item__icon {
     width: 42px;
     height: 42px;
+  }
+
+  .flow-item span,
+  .flow-item p {
+    font-size: 16px;
   }
 
   .faq-item {
@@ -2533,11 +2703,40 @@ button {
     grid-template-columns: 1fr;
     gap: 4px;
     padding: 44px 20px 26px;
-    font-size: 13px;
+    font-size: 15px;
   }
 
   .company-list dd {
     margin-bottom: 14px;
+  }
+
+  .final-cta {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .final-cta__box {
+    padding: 44px 22px 54px;
+  }
+
+  .final-cta__box h2 {
+    margin-bottom: 24px;
+    font-size: 26px;
+    line-height: 1.55;
+  }
+
+  .final-cta__box p {
+    margin-bottom: 34px;
+    font-size: 16px;
+    line-height: 2;
+  }
+
+  .final-cta__pc {
+    display: none;
+  }
+
+  .final-cta__sp {
+    display: inline;
   }
 
   .site-footer {
@@ -2548,8 +2747,14 @@ button {
     margin-bottom: 36px;
   }
 
+  .site-logo--footer img {
+    width: min(56vw, 160px);
+  }
+
   .footer-nav {
+    flex-direction: column;
     gap: 18px;
+    width: min(100%, 260px);
     margin-bottom: 46px;
   }
 
@@ -2557,10 +2762,10 @@ button {
     min-width: 0;
     min-height: 34px;
     padding: 7px 16px;
-    font-size: 14px;
+    font-size: 15px;
   }
 
   .footer-copy {
-    font-size: 12px;
+    font-size: 10px;
   }
 }

@@ -34,6 +34,19 @@ document.querySelectorAll("[data-line-link]").forEach((link) => {
   link.setAttribute("rel", "noopener noreferrer");
 });
 
+document.querySelectorAll(".faq-question").forEach((button) => {
+  const answerId = button.getAttribute("aria-controls");
+  const answer = answerId ? document.getElementById(answerId) : null;
+  const toggle = button.querySelector(".faq-toggle");
+
+  button.addEventListener("click", () => {
+    const isExpanded = button.getAttribute("aria-expanded") === "true";
+    button.setAttribute("aria-expanded", String(!isExpanded));
+    if (answer) answer.hidden = isExpanded;
+    if (toggle) toggle.textContent = isExpanded ? "＋" : "−";
+  });
+});
+
 if (menuButton && nav) {
   menuButton.addEventListener("click", () => {
     const isOpen = menuButton.getAttribute("aria-expanded") === "true";
@@ -69,6 +82,7 @@ if (staffList) {
             <img src="images/staff/external-link-icon-fixed.png" alt="" width="42" height="42">
           </a>` : ""}
         </div>
+        ${staff.role ? `<h4 class="staff-card__role">${staff.role}</h4>` : ""}
         <p class="staff-card__text">${staff.description || ""}</p>
       </article>
     `).join("");

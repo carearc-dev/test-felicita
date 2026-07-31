@@ -492,6 +492,10 @@ button {
   display: none !important;
 }
 
+.sp-break {
+  display: none;
+}
+
 .point-item__text p {
   max-width: 540px;
   margin: 0;
@@ -1476,13 +1480,13 @@ button {
 }
 
 .final-cta {
-  padding: 40px var(--side) 82px;
+  padding: 40px 0 0;
   text-align: center;
 }
 
 .final-cta__image {
-  width: min(100%, 760px);
-  aspect-ratio: 1074 / 412;
+  width: min(100%, 820px);
+  aspect-ratio: 1257 / 547;
   margin: 0 auto clamp(38px, 5vw, 68px);
   overflow: visible;
   background: transparent;
@@ -1493,9 +1497,14 @@ button {
   display: block;
   height: 100%;
   overflow: hidden;
-  background: #fff;
-  box-shadow: 0 18px 38px rgba(0, 0, 0, .14);
+  background: transparent;
+  box-shadow: none;
   transition: box-shadow .3s ease, transform .3s ease;
+}
+
+.final-cta__banner-link picture {
+  display: block;
+  height: 100%;
 }
 
 .final-cta__banner-link::after {
@@ -1512,12 +1521,12 @@ button {
 }
 
 .final-cta__banner-link:hover {
-  box-shadow: 0 24px 46px rgba(0, 0, 0, .18);
+  box-shadow: none;
   transform: translateY(-3px);
 }
 
 .final-cta__box {
-  width: min(100%, 920px);
+  width: 100%;
   margin: 0 auto;
   padding: 48px 40px;
   background: var(--color-soft);
@@ -2004,24 +2013,12 @@ button {
     white-space: normal;
   }
 
-  .point-heading__pc {
-    display: none !important;
-  }
-
-  .point-heading__sp {
-    display: inline !important;
+  .sp-break {
+    display: block;
   }
 
   .point-item__text p {
     max-width: 100%;
-  }
-
-  .solution__heading-text--pc {
-    display: none;
-  }
-
-  .solution__heading-text--sp {
-    display: inline;
   }
 
   .solution__box h2 {
@@ -2786,8 +2783,7 @@ button {
   }
 
   .final-cta {
-    padding-right: 0;
-    padding-left: 0;
+    padding-bottom: 0;
   }
 
   .final-cta__box {
@@ -2804,14 +2800,6 @@ button {
     margin-bottom: 34px;
     font-size: 16px;
     line-height: 2;
-  }
-
-  .final-cta__pc {
-    display: none;
-  }
-
-  .final-cta__sp {
-    display: inline;
   }
 
   .site-footer {
@@ -2948,12 +2936,14 @@ button {
   }
 
   .final-cta__image {
-    width: min(calc(100% - 32px), 760px);
-    margin-bottom: 32px;
+    width: 80%;
+    height: 80%;
+    aspect-ratio: 370 / 535;
+    margin: 0 auto 32px;
   }
 
   .final-cta__banner-link {
-    box-shadow: 0 14px 28px rgba(0, 0, 0, .13);
+    box-shadow: none;
   }
 
   .final-cta__banner-link::after {
@@ -3175,7 +3165,7 @@ button {
 
 @media (max-width: 1100px) {
   .final-cta__box {
-    margin-top: 120px;
+    margin-top: 0;
   }
 }
 

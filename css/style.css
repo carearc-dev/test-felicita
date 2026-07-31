@@ -148,6 +148,7 @@ button {
 .line-button--small {
   min-width: 204px;
   min-height: 46px;
+  margin-left: auto;
   padding: 8px 18px;
   font-size: 15px;
 }
@@ -303,7 +304,8 @@ button {
 
 .fv__lead {
   margin: 0 0 18px;
-  font-size: 16px;
+  font-size: 20px;
+  line-height: 1.6;
 }
 
 .fv h1 {
@@ -458,7 +460,7 @@ button {
   display: block;
   margin-bottom: 22px;
   color: #333;
-  font-size: 15px;
+  font-size: 13px;
   letter-spacing: .08em;
 }
 
@@ -497,10 +499,14 @@ button {
 }
 
 .point-item__text p {
-  max-width: 540px;
+  max-width: 590px;
   margin: 0;
   font-size: 16px;
-  line-height: 1.875;
+  line-height: 1.9;
+  line-break: strict;
+  overflow-wrap: normal;
+  word-break: normal;
+  text-wrap: pretty;
 }
 
 .point-item__image {
@@ -1677,7 +1683,7 @@ button {
   }
 
   .point-item__text p {
-    max-width: 500px;
+    max-width: 560px;
   }
 
   .site-nav {
@@ -2025,7 +2031,7 @@ button {
 
 @media (max-width: 820px) {
   .point-item__text h3 {
-    font-size: 26px;
+    font-size: 18px;
     line-height: 1.4;
     white-space: normal;
   }
@@ -2214,12 +2220,32 @@ button {
     line-height: 1.85;
   }
 
+  .fv__lead {
+    font-size: 17px;
+    line-height: 1.6;
+  }
+
   .site-header__inner {
+    gap: 10px;
     min-height: 62px;
   }
 
   .site-header__inner > .line-button {
-    display: none;
+    display: inline-flex;
+    width: auto;
+    min-width: 150px;
+    max-width: 48vw;
+    min-height: 42px;
+    margin-left: auto;
+    padding: 7px 12px;
+    gap: 8px;
+    font-size: 13px;
+    line-height: 1.25;
+    white-space: nowrap;
+  }
+
+  .site-logo img {
+    width: clamp(112px, 33vw, 150px);
   }
 
   .menu-button {
@@ -2279,6 +2305,19 @@ button {
 
   .line-button--small img {
     width: 32px;
+    max-width: 9vw;
+  }
+
+  .site-header__inner > .line-button {
+    width: auto;
+    min-width: 150px;
+    max-width: 48vw;
+    min-height: 42px;
+    margin-left: auto;
+    padding: 7px 12px;
+    gap: 8px;
+    font-size: 13px;
+    line-height: 1.25;
   }
 
   .site-nav .site-nav__line {
@@ -2353,7 +2392,7 @@ button {
 
   .point-item__text h3 {
     margin: 0 0 25px;
-    font-size: 25px;
+    font-size: 18px;
     line-height: 1.4;
   }
 
@@ -2367,7 +2406,7 @@ button {
   .point-item__text p {
     max-width: 100%;
     font-size: 15px;
-    line-height: 1.9;
+    line-height: 1.95;
   }
 
   .about-artist {
@@ -2597,7 +2636,7 @@ button {
   }
 
   .works-section__note {
-    margin-top: 20px;
+    margin-top: 30px;
     padding: 0 var(--side);
     font-size: 15px;
   }

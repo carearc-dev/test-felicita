@@ -1479,6 +1479,23 @@ button {
   text-decoration: underline;
 }
 
+.company-list__external-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
+.company-list__external-icon {
+  display: inline-block;
+  flex: 0 0 auto;
+  width: 15px;
+  height: 15px;
+  object-fit: contain;
+  filter: brightness(0) saturate(100%) invert(12%) sepia(7%) saturate(661%) hue-rotate(169deg) brightness(96%) contrast(89%);
+}
+
 .final-cta {
   padding: 40px 0 0;
   text-align: center;

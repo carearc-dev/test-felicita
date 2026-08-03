@@ -1,5 +1,14 @@
 const staffData = [
   {
+    nameJa: "大浦 有紀子",
+    nameEn: "Yukiko Oura",
+    role: "Hair & Make Artist",
+    image: "images/staff/stylist-hairmake-03.jpg",
+    instagramUrl: "https://www.instagram.com/y.o_ura?igsh=NW0zeHZ2cnFrcG1r",
+    externalUrl: "",
+    description: "大阪グラムール美容専門学校卒業後、美容師として15年のキャリアを重ね、ヘアセット・着付け・アイラッシュ・ネイルまで幅広い技術を習得。七五三、ブライダル、イベント、メディア撮影など多彩な現場経験を活かし、ご要望や状況に合わせた安心感のあるヘアメイクをご提案します。"
+  },
+  {
     nameJa: "溝口 樹莉",
     nameEn: "Juri Mizoguchi",
     role: "Hair & Make Artist",
@@ -16,15 +25,6 @@ const staffData = [
     instagramUrl: "https://www.instagram.com/_fuka_08?igsh=Y2E4M2c5Yjh1dzF1",
     externalUrl: "",
     description: "窪田理容美容専門学校卒業。ネイル・アイラッシュ・メイクを中心に技術を磨き、広告撮影、成人式撮影、アニメイベントなど多様な現場でヘアメイクを担当。トレンド感と丁寧なカウンセリングを大切にし、キャラクターイメージの再現やご要望に沿った提案にも柔軟に対応します。"
-  },
-  {
-    nameJa: "大浦 有紀子",
-    nameEn: "Yukiko Oura",
-    role: "Hair & Make Artist",
-    image: "images/staff/stylist-hairmake-03.jpg",
-    instagramUrl: "https://www.instagram.com/y.o_ura?igsh=NW0zeHZ2cnFrcG1r",
-    externalUrl: "",
-    description: "大阪グラムール美容専門学校卒業後、美容師として15年のキャリアを重ね、ヘアセット・着付け・アイラッシュ・ネイルまで幅広い技術を習得。七五三、ブライダル、イベント、メディア撮影など多彩な現場経験を活かし、ご要望や状況に合わせた安心感のあるヘアメイクをご提案します。"
   }
   /*
   ,

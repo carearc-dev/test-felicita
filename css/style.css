@@ -3253,3 +3253,219 @@ button {
     margin-top: 100px;
   }
 }
+
+/* Aug 2026 final requested adjustments */
+.site-header .site-logo img {
+  width: clamp(166px, 18.5vw, 252px);
+}
+
+.point-item__image--02 img {
+  object-position: 50% 48%;
+}
+
+.works-logo-grid__row--top {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(26px, 3.8vw, 58px);
+  width: min(100%, 760px);
+}
+
+.works-logo-grid__row--top figure:nth-child(4) img {
+  max-width: 112px;
+  max-height: 76px;
+}
+
+.price-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.price-card__note {
+  margin: auto 0 0;
+  padding-top: 18px;
+  color: #555;
+  font-size: 13px;
+  line-height: 1.7;
+  text-align: left;
+}
+
+.site-footer {
+  color: #fff;
+  background: #433d3c;
+}
+
+.site-footer .footer-nav a {
+  color: #fff;
+  border-color: #fff;
+}
+
+.site-footer .footer-copy,
+.site-footer .footer-copy a {
+  color: #fff;
+}
+
+@media (max-width: 1024px) {
+  .site-header .site-logo img {
+    width: clamp(154px, 24vw, 222px);
+  }
+
+  .works-logo-grid__row--top {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: clamp(16px, 3vw, 34px);
+    width: min(100%, 620px);
+  }
+
+  .works-logo-grid__row--top figure:nth-child(1) img {
+    max-width: 142px;
+    max-height: 58px;
+  }
+
+  .works-logo-grid__row--top figure:nth-child(2) img,
+  .works-logo-grid__row--top figure:nth-child(3) img,
+  .works-logo-grid__row--top figure:nth-child(4) img {
+    max-width: 94px;
+    max-height: 62px;
+  }
+}
+
+@media (max-width: 820px) {
+  .works-logo-grid__row--top {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 8px;
+    width: min(100%, 440px);
+  }
+
+  .works-logo-grid__row--top figure {
+    width: 76px;
+    height: 50px;
+    min-height: 50px;
+  }
+
+  .works-logo-grid__row--top figure:nth-child(1) img,
+  .works-logo-grid__row--top figure:nth-child(2) img,
+  .works-logo-grid__row--top figure:nth-child(3) img,
+  .works-logo-grid__row--top figure:nth-child(4) img {
+    max-width: 70px;
+    max-height: 40px;
+  }
+}
+
+@media (max-width: 720px) {
+  .site-header .site-logo img {
+    width: clamp(116px, 31vw, 152px);
+  }
+
+  .works-logo-grid__row--top {
+    gap: 6px;
+    width: min(100%, 330px);
+  }
+
+  .works-logo-grid__row--top figure {
+    width: 68px;
+    height: 46px;
+    min-height: 46px;
+  }
+
+  .works-logo-grid__row--top figure:nth-child(1) img,
+  .works-logo-grid__row--top figure:nth-child(2) img,
+  .works-logo-grid__row--top figure:nth-child(3) img,
+  .works-logo-grid__row--top figure:nth-child(4) img {
+    max-width: 62px;
+    max-height: 34px;
+  }
+
+  .price-card__note {
+    padding-top: 14px;
+    font-size: 12px;
+    line-height: 1.7;
+  }
+}
+
+/* Aug 2026 works collage placement update */
+@media (min-width: 1101px) {
+  .works-collage__image--r01 {
+    top: 116px;
+    right: 64px;
+    z-index: 1;
+    width: min(190px, 48%);
+    aspect-ratio: 189 / 252;
+  }
+
+  .works-collage__image--r02 {
+    left: 63%;
+    top: 270px;
+    z-index: 2;
+    width: min(98px, 28%);
+    aspect-ratio: 97 / 156;
+  }
+
+  .works-collage__image--r03 {
+    right: 35%;
+    bottom: -88px;
+    z-index: 3;
+    width: min(130px, 34%);
+    aspect-ratio: 130 / 195;
+  }
+
+  .works-collage__image--r01 img {
+    object-position: center top;
+  }
+}
+
+@media (min-width: 821px) and (max-width: 1024px) {
+  .works-collage__image--l03 {
+    top: auto;
+    left: 16%;
+    bottom: 128px;
+    width: min(124px, 40%);
+  }
+
+  .works-collage__image--r03 {
+    top: auto;
+    right: -2%;
+    bottom: -6px;
+    width: min(112px, 34%);
+  }
+}
+
+@media (max-width: 720px) {
+  .works-collage--right {
+    order: 3;
+    align-self: flex-end;
+    min-height: 300px;
+    margin-top: 75px;
+    margin-left: auto;
+    margin-right: 0;
+  }
+
+  .works-collage__image--l02 {
+    top: 77px;
+    left: 71%;
+    right: auto;
+  }
+
+  .works-collage__image--l03 {
+    top: 162px;
+    left: 32%;
+    bottom: auto;
+  }
+
+  .works-collage__image--r02 {
+    top: 52px;
+    left: 13px;
+    bottom: auto;
+    width: 44%;
+  }
+
+  .works-collage__image--r01 {
+    top: -40px;
+    right: -20px;
+    width: 66%;
+  }
+
+  .works-collage__image--r03 {
+    top: 157px;
+    right: -2%;
+    bottom: auto;
+    width: 67%;
+  }
+}

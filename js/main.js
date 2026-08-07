@@ -119,6 +119,38 @@ if (staffList) {
   }
 }
 
+const voiceSwiperEl = document.querySelector(".voice-swiper");
+
+if (voiceSwiperEl && typeof Swiper !== "undefined") {
+  const voiceSlides = voiceSwiperEl.querySelectorAll(".swiper-slide").length;
+
+  new Swiper(".voice-swiper", {
+    loop: voiceSlides > 3,
+    watchOverflow: true,
+    keyboard: { enabled: true },
+    slidesPerView: 1.08,
+    spaceBetween: 18,
+    pagination: {
+      el: ".voice-pagination",
+      clickable: true
+    },
+    navigation: {
+      nextEl: ".voice-arrow--next",
+      prevEl: ".voice-arrow--prev"
+    },
+    breakpoints: {
+      720: {
+        slidesPerView: 2.2,
+        spaceBetween: 24
+      },
+      980: {
+        slidesPerView: 3,
+        spaceBetween: 34
+      }
+    }
+  });
+}
+
 const revealElements = document.querySelectorAll(revealTargets.join(","));
 
 if ("IntersectionObserver" in window) {

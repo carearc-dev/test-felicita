@@ -22,7 +22,7 @@ const staffData = [
     nameEn: "Fuka Hagane",
     role: "Hair & Make Artist",
     image: "images/staff/stylist-hairmake-02.jpg",
-    instagramUrl: "https://www.instagram.com/_fuka_08?igsh=Y2E4M2c5Yjh1dzF1",
+    instagramUrl: "https://www.instagram.com/hairmake_fuka_?igsh=MXBjNW4ybzg0cnk3dA==",
     externalUrl: "",
     description: "窪田理容美容専門学校卒業。ネイル・アイラッシュ・メイクを中心に技術を磨き、広告撮影、成人式撮影、アニメイベントなど多様な現場でヘアメイクを担当。トレンド感と丁寧なカウンセリングを大切にし、キャラクターイメージの再現やご要望に沿った提案にも柔軟に対応します。"
   }

@@ -15,7 +15,7 @@ const staffData = [
     image: "images/staff/stylist-hairmake-01.jpg",
     instagramUrl: "https://www.instagram.com/ng.__.41?igsh=MWxzODE3OW9vZjhsNw%3D%3D",
     externalUrl: "",
-    description: "大村美容ファッション専門学校卒業。個性的なデザインやトレンドを取り入れたヘアメイクを得意とし、イベントやファッションショー、ポートレート撮影など幅広い現場を経験。軽快なフットワークとコミュニケーション力で現場のニーズを素早く汲み取り、一人ひとりの魅力を引き出します。"
+    description: "大村美容ファッション専門学校卒業。個性的なデザインやトレンドを取り入れたヘアメイクを得意とし、イベントやファッションショー、ポートレート撮影など幅広い現場を経験。軽快なフットワークとコミュニケーション力で現場のニーズを素早く汲み取り、一人一人の魅力を引き出します。"
   },
   {
     nameJa: "羽兼 楓夏",
@@ -24,7 +24,7 @@ const staffData = [
     image: "images/staff/stylist-hairmake-02.jpg",
     instagramUrl: "https://www.instagram.com/hairmake_fuka_?igsh=MXBjNW4ybzg0cnk3dA==",
     externalUrl: "",
-    description: "窪田理容美容専門学校卒業。ネイル・アイラッシュ・メイクを中心に技術を磨き、広告撮影、成人式撮影、アニメイベントなど多様な現場でヘアメイクを担当。トレンド感と丁寧なカウンセリングを大切にし、キャラクターイメージの再現やご要望に沿った提案にも柔軟に対応します。"
+    description: "窪田理容美容専門学校卒業。ネイル・アイラッシュ・メイクを中心に技術を磨き、広告撮影、成人式撮影、アニメイベントなど多様な現場でヘアメイクを担当。トレンド感と<span class=\"no-break\">丁寧なカウンセリング</span>を大切にし、キャラクターイメージの再現やご要望に沿った提案にも柔軟に対応します。"
   }
   /*
   ,

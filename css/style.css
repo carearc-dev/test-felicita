@@ -18,10 +18,12 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 88px;
 }
 
 body {
   margin: 0;
+  padding-top: 68px;
   color: var(--color-text);
   font-family: var(--font-ja);
   font-size: 16px;
@@ -60,10 +62,14 @@ button {
 }
 
 .site-header {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 50;
+  width: 100%;
   background: rgba(255, 255, 255, .95);
+  backdrop-filter: blur(10px);
 }
 
 .site-header__inner {
@@ -499,7 +505,7 @@ button {
 }
 
 .point-item__text p {
-  max-width: 590px;
+  max-width: 37em;
   margin: 0;
   font-size: 16px;
   line-height: 1.9;
@@ -601,6 +607,7 @@ button {
 }
 
 .about-artist__text {
+  max-width: 43em;
   font-size: 16px;
   line-height: 30px;
 }
@@ -609,6 +616,7 @@ button {
   margin: 0;
   line-break: strict;
   overflow-wrap: normal;
+  word-break: normal;
   text-wrap: pretty;
 }
 
@@ -705,10 +713,12 @@ button {
 }
 
 .works-logo-grid__row--top {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  width: min(100%, 650px);
-  margin: 0 auto;
-  padding-bottom: 10px;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    justify-content: center;
+    justify-items: center;
+    width: min(100%, 820px);
+    margin: 0 auto;
+    padding-bottom: 10px;
 }
 
 .works-logo-grid__row--bottom {
@@ -739,11 +749,15 @@ button {
 }
 
 .works-logo-grid__row--top figure:nth-child(1) img {
-  max-width: 180px;
-  max-height: 74px;
+  max-width: 206px;
+  max-height: 84px;
 }
 
-.works-logo-grid__row--top figure:nth-child(2) img,
+.works-logo-grid__row--top figure:nth-child(2) img {
+  max-width: 138px;
+  max-height: 84px;
+}
+
 .works-logo-grid__row--top figure:nth-child(3) img {
   max-width: 118px;
   max-height: 76px;
@@ -1149,10 +1163,11 @@ button {
 }
 
 .staff-card .image-frame {
-  position: relative;
-  z-index: 1;
-  aspect-ratio: 1.28 / 1;
-  margin-top: -2px;
+    position: relative;
+    z-index: 1;
+    width: calc(100% - 64px);
+    aspect-ratio: 1.28 / 1;
+    margin: 26px auto 0;
 }
 
 .staff-card .image-frame img {
@@ -1160,12 +1175,12 @@ button {
 }
 
 .staff-card__actions {
-  position: relative;
-  z-index: 2;
-  display: flex;
-  justify-content: flex-end;
-  gap: 12px;
-  margin: -32px 8px 0 0;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin: -32px 28px 0 0;
 }
 
 .staff-card__actions a {
@@ -1193,24 +1208,41 @@ button {
 }
 
 .staff-card__role {
-  margin: 20px 6px 0;
-  color: #4b4f54;
-  font-size: 15px;
-  font-weight: 500;
+    margin: 24px 12px 0;
+    color: #4b4f54;
+    font-size: 15px;
+    font-weight: 500;
   letter-spacing: .04em;
   line-height: 1.45;
 }
 
 .staff-card__text {
-  margin: 12px 6px 0;
-  font-size: 15px;
-  line-height: 1.8;
+    margin: 12px 12px 0;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.no-break {
+  white-space: nowrap;
+}
+
+.staff-copy-break {
+  display: none;
 }
 
 @media (max-width: 1100px) {
-  .staff-card {
-    min-height: 490px;
-  }
+    .staff-card {
+        min-height: 490px;
+    }
+
+    .staff-card .image-frame {
+        width: calc(100% - 46px);
+        margin-top: 22px;
+    }
+
+    .staff-card__actions {
+        margin-right: 18px;
+    }
 }
 
 .slider-arrow {
@@ -1345,12 +1377,19 @@ button {
   font-size: 17px;
   font-weight: 700;
   line-height: 1.65;
+  line-break: strict;
+  text-wrap: pretty;
 }
 
 .voice-card__body p {
   margin: 0 0 12px;
   font-size: 15px;
   line-height: 1.85;
+  letter-spacing: .01em;
+  line-break: strict;
+  overflow-wrap: normal;
+  text-wrap: pretty;
+  word-break: normal;
 }
 
 .voice-card__body p:last-child {
@@ -1811,7 +1850,7 @@ button {
   }
 
   .point-item__text p {
-    max-width: 560px;
+    max-width: 36em;
   }
 
   .site-nav {
@@ -1970,6 +2009,7 @@ button {
 
   .about-artist__text {
     width: min(88%, 620px);
+    max-width: 38em;
     margin: 0 auto;
     line-height: 1.95;
   }
@@ -2170,7 +2210,7 @@ button {
   }
 
   .point-item__text p {
-    max-width: 100%;
+    max-width: 34em;
   }
 
   .solution__box h2 {
@@ -2533,7 +2573,7 @@ button {
   }
 
   .point-item__text p {
-    max-width: 100%;
+    max-width: 32em;
     font-size: 15px;
     line-height: 1.95;
   }
@@ -2581,6 +2621,7 @@ button {
 
   .about-artist__text {
     width: min(86%, 500px);
+    max-width: 32em;
     margin-right: auto;
     margin-left: auto;
     font-size: 16px;
@@ -2838,6 +2879,15 @@ button {
     font-size: 13px;
   }
 
+  .staff-card .image-frame {
+    width: calc(100% - 28px);
+    margin-top: 18px;
+  }
+
+  .staff-card__actions {
+    margin: -30px 10px 0 0;
+  }
+
   .staff-card__actions a {
     width: 43px;
     height: 43px;
@@ -2845,13 +2895,13 @@ button {
   }
 
   .staff-card__role {
-    margin: 18px 4px 0;
+    margin: 18px 8px 0;
     font-size: 14px;
     line-height: 1.45;
   }
 
   .staff-card__text {
-    margin: 10px 4px 0;
+    margin: 10px 8px 0;
     font-size: 14px;
     line-height: 1.75;
   }
@@ -2861,7 +2911,7 @@ button {
   }
 
   .voice-slider-wrap {
-    width: min(100%, 420px);
+    width: min(calc(100% - 40px), 420px);
     padding-top: 8px;
   }
 
@@ -2871,7 +2921,7 @@ button {
 
   .voice-card {
     min-height: 430px;
-    padding: 24px 18px 22px;
+    padding: 24px 16px 22px;
   }
 
   .voice-card h2 {
@@ -2884,18 +2934,19 @@ button {
   }
 
   .voice-card__body {
-    padding: 22px 18px;
+    padding: 22px clamp(16px, 5vw, 24px);
   }
 
   .voice-card__body h3 {
     margin-bottom: 14px;
     font-size: 15px;
-    line-height: 1.6;
+    line-height: 1.65;
   }
 
   .voice-card__body p {
-    font-size: 14px;
-    line-height: 1.8;
+    font-size: 13.8px;
+    line-height: 1.85;
+    letter-spacing: 0;
   }
 
   .voice-arrow--next {
@@ -3454,8 +3505,11 @@ button {
 
 .works-logo-grid__row--top {
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: clamp(26px, 3.8vw, 58px);
-  width: min(100%, 760px);
+  justify-content: center;
+  justify-items: center;
+  column-gap: clamp(44px, 5vw, 78px);
+  row-gap: 20px;
+  width: min(100%, 840px);
 }
 
 .works-logo-grid__row--top figure:nth-child(4) img {
@@ -3499,16 +3553,22 @@ button {
 
   .works-logo-grid__row--top {
     grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: clamp(16px, 3vw, 34px);
-    width: min(100%, 620px);
+    justify-content: center;
+    justify-items: center;
+    column-gap: clamp(20px, 3.4vw, 42px);
+    width: min(100%, 680px);
   }
 
   .works-logo-grid__row--top figure:nth-child(1) img {
-    max-width: 142px;
-    max-height: 58px;
+    max-width: 164px;
+    max-height: 66px;
   }
 
-  .works-logo-grid__row--top figure:nth-child(2) img,
+  .works-logo-grid__row--top figure:nth-child(2) img {
+    max-width: 112px;
+    max-height: 68px;
+  }
+
   .works-logo-grid__row--top figure:nth-child(3) img,
   .works-logo-grid__row--top figure:nth-child(4) img {
     max-width: 94px;
@@ -3529,8 +3589,16 @@ button {
     min-height: 50px;
   }
 
-  .works-logo-grid__row--top figure:nth-child(1) img,
-  .works-logo-grid__row--top figure:nth-child(2) img,
+  .works-logo-grid__row--top figure:nth-child(1) img {
+    max-width: 78px;
+    max-height: 44px;
+  }
+
+  .works-logo-grid__row--top figure:nth-child(2) img {
+    max-width: 76px;
+    max-height: 44px;
+  }
+
   .works-logo-grid__row--top figure:nth-child(3) img,
   .works-logo-grid__row--top figure:nth-child(4) img {
     max-width: 70px;
@@ -3554,8 +3622,16 @@ button {
     min-height: 46px;
   }
 
-  .works-logo-grid__row--top figure:nth-child(1) img,
-  .works-logo-grid__row--top figure:nth-child(2) img,
+  .works-logo-grid__row--top figure:nth-child(1) img {
+    max-width: 68px;
+    max-height: 38px;
+  }
+
+  .works-logo-grid__row--top figure:nth-child(2) img {
+    max-width: 66px;
+    max-height: 38px;
+  }
+
   .works-logo-grid__row--top figure:nth-child(3) img,
   .works-logo-grid__row--top figure:nth-child(4) img {
     max-width: 62px;
@@ -3815,6 +3891,196 @@ button {
     padding: 0 26px;
     font-size: 15px;
     line-height: 2.05;
+  }
+}
+
+/* 2026-08-10: works logo, stylist card, and 540px text alignment refinements */
+.works-logo-grid {
+  width: min(100%, 940px);
+  margin-right: auto;
+  margin-left: auto;
+  gap: clamp(54px, 5.4vw, 86px);
+}
+
+.works-logo-grid__row,
+.works-logo-grid__row--top,
+.works-logo-grid__row--bottom {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+  width: min(100%, 940px);
+  margin-right: auto;
+  margin-left: auto;
+  column-gap: clamp(58px, 5.8vw, 96px);
+  row-gap: 22px;
+}
+
+.works-logo-grid__row figure,
+.works-logo-grid__row--top figure,
+.works-logo-grid__row--bottom figure {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  min-width: 0;
+  min-height: 72px;
+  margin: 0;
+}
+
+.works-logo-grid__row--top figure:nth-child(1) img {
+  max-width: 190px;
+  max-height: 78px;
+}
+
+.works-logo-grid__row--top figure:nth-child(2) img {
+  max-width: 132px;
+  max-height: 78px;
+}
+
+.works-logo-grid__row--top figure:nth-child(3) img,
+.works-logo-grid__row--top figure:nth-child(4) img {
+  max-width: 120px;
+  max-height: 76px;
+}
+
+.works-logo-grid__row--bottom figure:nth-child(1) img {
+  max-width: 118px;
+  max-height: 76px;
+}
+
+.works-logo-grid__row--bottom figure:nth-child(2) img {
+  max-width: 154px;
+  max-height: 78px;
+}
+
+.works-logo-grid__row--bottom figure:nth-child(3) img {
+  max-width: 234px;
+  max-height: 76px;
+}
+
+.works-logo-grid__row--bottom figure:nth-child(4) img {
+  max-width: 94px;
+  max-height: 76px;
+}
+
+.staff-card {
+  --staff-card-inset: 38px;
+}
+
+.staff-card .image-frame {
+  width: calc(100% - (var(--staff-card-inset) * 2));
+  margin: 26px var(--staff-card-inset) 0;
+}
+
+.staff-card__actions {
+  margin-right: calc(var(--staff-card-inset) - 10px);
+}
+
+.staff-card__role,
+.staff-card__text {
+  margin-right: var(--staff-card-inset);
+  margin-left: var(--staff-card-inset);
+}
+
+@media (max-width: 1100px) {
+  .works-logo-grid,
+  .works-logo-grid__row,
+  .works-logo-grid__row--top,
+  .works-logo-grid__row--bottom {
+    width: min(100%, 760px);
+  }
+
+  .works-logo-grid__row,
+  .works-logo-grid__row--top,
+  .works-logo-grid__row--bottom {
+    column-gap: clamp(26px, 4vw, 54px);
+  }
+
+  .staff-card {
+    --staff-card-inset: 28px;
+  }
+
+  .staff-card .image-frame {
+    width: calc(100% - (var(--staff-card-inset) * 2));
+    margin-right: var(--staff-card-inset);
+    margin-left: var(--staff-card-inset);
+  }
+
+  .staff-card__actions {
+    margin-right: calc(var(--staff-card-inset) - 8px);
+  }
+
+  .staff-card__role,
+  .staff-card__text {
+    margin-right: var(--staff-card-inset);
+    margin-left: var(--staff-card-inset);
+  }
+}
+
+@media (max-width: 820px) {
+  .works-logo-grid,
+  .works-logo-grid__row,
+  .works-logo-grid__row--top,
+  .works-logo-grid__row--bottom {
+    width: min(100%, 560px);
+  }
+
+  .works-logo-grid__row,
+  .works-logo-grid__row--top,
+  .works-logo-grid__row--bottom {
+    column-gap: 20px;
+    row-gap: 22px;
+  }
+}
+
+@media (max-width: 720px) {
+  .works-logo-grid,
+  .works-logo-grid__row,
+  .works-logo-grid__row--top,
+  .works-logo-grid__row--bottom {
+    width: min(100%, 360px);
+  }
+
+  .works-logo-grid__row,
+  .works-logo-grid__row--top,
+  .works-logo-grid__row--bottom {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 34px;
+    row-gap: 22px;
+  }
+
+  .staff-card {
+    --staff-card-inset: 18px;
+  }
+
+  .staff-card .image-frame {
+    width: calc(100% - (var(--staff-card-inset) * 2));
+    margin-right: var(--staff-card-inset);
+    margin-left: var(--staff-card-inset);
+  }
+
+  .staff-card__actions {
+    margin-right: calc(var(--staff-card-inset) - 8px);
+  }
+
+  .staff-card__role,
+  .staff-card__text {
+    margin-right: var(--staff-card-inset);
+    margin-left: var(--staff-card-inset);
+  }
+}
+
+@media (max-width: 540px) {
+  .about-artist__text p {
+    max-width: 29em;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: left;
+    line-height: 2;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+    line-break: strict;
   }
 }
 
@@ -4174,10 +4440,1134 @@ body {
     margin-top: clamp(86px, 20vw, 112px);
   }
 
+  .voice-slider-wrap {
+    width: min(calc(100% - 32px), 390px);
+  }
+
+  .voice-card {
+    min-height: 446px;
+    padding: 22px 14px 20px;
+  }
+
+  .voice-card__body {
+    padding: 20px 16px;
+  }
+
+  .voice-card__body h3 {
+    font-size: 14.5px;
+    line-height: 1.65;
+  }
+
+  .voice-card__body p {
+    font-size: 13.5px;
+    line-height: 1.85;
+  }
+
   .final-cta__box p,
   .about-artist__text,
-  .point-item__text p {
+  .point-item__text p,
+  .voice-card__body p {
     overflow-wrap: normal;
     word-break: normal;
+  }
+}
+
+/* 2026-08-10: keep works logos and about copy stable on narrow/tablet widths */
+.works-section,
+.about-artist {
+  overflow-x: hidden;
+}
+
+.about-artist__text,
+.about-artist__text p {
+  line-break: auto;
+  word-break: normal;
+  overflow-wrap: break-word;
+}
+
+@media (max-width: 1024px) {
+  .works-logo-grid {
+    width: min(100%, 700px);
+    max-width: calc(100vw - (var(--side) * 2));
+    margin-inline: auto;
+    gap: clamp(24px, 4vw, 40px);
+  }
+
+  .works-logo-grid__row,
+  .works-logo-grid__row--top,
+  .works-logo-grid__row--bottom {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+    min-width: 0;
+    column-gap: clamp(18px, 3vw, 36px);
+    row-gap: 20px;
+  }
+
+  .works-logo-grid figure,
+  .works-logo-grid__row figure,
+  .works-logo-grid__row--top figure,
+  .works-logo-grid__row--bottom figure {
+    display: grid;
+    place-items: center;
+    width: 100%;
+    min-width: 0;
+    min-height: 54px;
+    margin: 0;
+  }
+
+  .works-logo-grid img,
+  .works-logo-grid__row img,
+  .works-logo-grid__row--top img,
+  .works-logo-grid__row--bottom img {
+    display: block;
+    width: auto;
+    max-width: min(100%, 108px);
+    max-height: 50px;
+    object-fit: contain;
+  }
+
+  .works-logo-grid__row--bottom figure:nth-child(2) img {
+    max-width: min(100%, 118px);
+  }
+
+  .works-logo-grid__row--bottom figure:nth-child(3) img {
+    max-width: min(100%, 132px);
+  }
+
+  .works-logo-grid__row--bottom figure:nth-child(4) img {
+    max-width: min(100%, 72px);
+  }
+
+  .about-artist__inner {
+    width: 100%;
+    max-width: 100%;
+    margin-inline: auto;
+    padding-inline: var(--side);
+    box-sizing: border-box;
+    overflow: visible;
+  }
+
+  .about-artist__visual {
+    width: min(100%, 680px);
+    max-width: calc(100vw - (var(--side) * 2));
+    margin: 70px auto 0;
+    transform: none;
+  }
+
+  .about-artist__text {
+    width: 100%;
+    max-width: min(100%, 38em);
+    margin-inline: auto;
+    padding-inline: 0;
+    box-sizing: border-box;
+  }
+
+  .about-artist__text p {
+    max-width: 100%;
+    margin-inline: auto;
+    text-align: left;
+    line-height: 1.9;
+    letter-spacing: 0;
+    line-break: auto;
+    word-break: normal;
+    overflow-wrap: break-word;
+  }
+}
+
+@media (max-width: 820px) {
+  .works-logo-grid {
+    width: min(100%, 430px);
+    max-width: calc(100vw - (var(--side) * 2));
+    gap: 18px;
+  }
+
+  .works-logo-grid__row,
+  .works-logo-grid__row--top,
+  .works-logo-grid__row--bottom {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: clamp(22px, 7vw, 44px);
+    row-gap: 18px;
+  }
+
+  .works-logo-grid figure,
+  .works-logo-grid__row figure,
+  .works-logo-grid__row--top figure,
+  .works-logo-grid__row--bottom figure {
+    min-height: 52px;
+  }
+
+  .works-logo-grid img,
+  .works-logo-grid__row img,
+  .works-logo-grid__row--top img,
+  .works-logo-grid__row--bottom img {
+    max-width: min(100%, 112px);
+    max-height: 46px;
+  }
+
+  .works-logo-grid__row--bottom figure:nth-child(2) img {
+    max-width: min(100%, 118px);
+  }
+
+  .works-logo-grid__row--bottom figure:nth-child(3) img {
+    max-width: min(100%, 128px);
+  }
+
+  .works-logo-grid__row--bottom figure:nth-child(4) img {
+    max-width: min(100%, 66px);
+  }
+
+  .about-artist__visual {
+    width: min(100%, 620px);
+  }
+
+  .about-artist__image--main {
+    left: 0;
+    width: 74%;
+  }
+
+  .about-artist__image--sub {
+    right: 0;
+    width: 70%;
+  }
+
+  .about-artist__text {
+    max-width: min(100%, 34em);
+  }
+}
+
+@media (max-width: 540px) {
+  .works-logo-grid {
+    width: min(100%, 320px);
+  }
+
+  .works-logo-grid__row,
+  .works-logo-grid__row--top,
+  .works-logo-grid__row--bottom {
+    column-gap: 18px;
+    row-gap: 16px;
+  }
+
+  .works-logo-grid img,
+  .works-logo-grid__row img,
+  .works-logo-grid__row--top img,
+  .works-logo-grid__row--bottom img {
+    max-width: min(100%, 96px);
+    max-height: 42px;
+  }
+
+  .about-artist__inner {
+    padding-inline: clamp(22px, 6vw, 32px);
+  }
+
+  .about-artist__visual {
+    width: calc(100vw - 48px);
+    max-width: 100%;
+    margin-top: 56px;
+  }
+
+  .about-artist__image--main {
+    top: 0;
+    left: 0;
+    width: 76%;
+  }
+
+  .about-artist__image--sub {
+    right: 0;
+    bottom: 0;
+    width: 68%;
+  }
+
+  .about-artist__text {
+    max-width: 100%;
+  }
+
+  .about-artist__text p {
+    font-size: 16px;
+    line-height: 1.9;
+    letter-spacing: 0;
+  }
+}
+
+/* 2026-08-10: responsive guard for works logos and about copy */
+@media (max-width: 1024px) {
+  .works-section,
+  .works-section__band,
+  .about-artist {
+    overflow-x: hidden;
+  }
+
+  .works-logo-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: min(100%, 720px) !important;
+    max-width: calc(100vw - (var(--side) * 2)) !important;
+    margin-inline: auto !important;
+    gap: clamp(20px, 3vw, 32px) !important;
+  }
+
+  .works-logo-grid__row,
+  .works-logo-grid__row--top,
+  .works-logo-grid__row--bottom {
+    display: grid !important;
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    align-items: center !important;
+    justify-content: center !important;
+    justify-items: center !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    gap: 22px clamp(24px, 4vw, 46px) !important;
+  }
+
+  .works-logo-grid figure,
+  .works-logo-grid__row figure,
+  .works-logo-grid__row--top figure,
+  .works-logo-grid__row--bottom figure {
+    display: grid !important;
+    place-items: center !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 140px !important;
+    min-height: 56px !important;
+    margin: 0 !important;
+  }
+
+  .works-logo-grid img,
+  .works-logo-grid__row img,
+  .works-logo-grid__row--top img,
+  .works-logo-grid__row--bottom img {
+    display: block !important;
+    width: auto !important;
+    max-width: min(100%, 108px) !important;
+    max-height: 48px !important;
+    object-fit: contain !important;
+  }
+
+  .works-logo-grid__row--bottom figure:nth-child(2) img {
+    max-width: min(100%, 116px) !important;
+  }
+
+  .works-logo-grid__row--bottom figure:nth-child(3) img {
+    max-width: min(100%, 126px) !important;
+  }
+
+  .works-logo-grid__row--bottom figure:nth-child(4) img {
+    max-width: min(100%, 68px) !important;
+  }
+
+  .about-artist__inner {
+    grid-template-columns: 1fr !important;
+    justify-items: center !important;
+    width: min(100%, 760px) !important;
+    max-width: calc(100vw - (var(--side) * 2)) !important;
+    margin-inline: auto !important;
+    padding-inline: 0 !important;
+    box-sizing: border-box !important;
+    overflow: visible !important;
+  }
+
+  .about-artist__visual {
+    width: min(100%, 640px) !important;
+    max-width: 100% !important;
+    margin: 70px auto 0 !important;
+  }
+
+  .about-artist__text {
+    width: 100% !important;
+    max-width: min(100%, 35em) !important;
+    margin-inline: auto !important;
+    padding-inline: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  .about-artist__text p {
+    max-width: 100% !important;
+    margin-inline: 0 !important;
+    line-height: 1.95 !important;
+    letter-spacing: 0 !important;
+    text-align: left !important;
+    line-break: auto !important;
+    word-break: normal !important;
+    overflow-wrap: break-word !important;
+  }
+}
+
+@media (max-width: 820px) {
+  .works-logo-grid {
+    width: min(100%, 400px) !important;
+    gap: 18px !important;
+  }
+
+  .works-logo-grid__row,
+  .works-logo-grid__row--top,
+  .works-logo-grid__row--bottom {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 16px 28px !important;
+  }
+
+  .works-logo-grid figure,
+  .works-logo-grid__row figure,
+  .works-logo-grid__row--top figure,
+  .works-logo-grid__row--bottom figure {
+    max-width: 148px !important;
+    min-height: 50px !important;
+  }
+
+  .works-logo-grid img,
+  .works-logo-grid__row img,
+  .works-logo-grid__row--top img,
+  .works-logo-grid__row--bottom img {
+    max-width: min(100%, 94px) !important;
+    max-height: 42px !important;
+  }
+
+  .works-logo-grid__row--bottom figure:nth-child(2) img {
+    max-width: min(100%, 104px) !important;
+  }
+
+  .works-logo-grid__row--bottom figure:nth-child(3) img {
+    max-width: min(100%, 108px) !important;
+  }
+
+  .works-logo-grid__row--bottom figure:nth-child(4) img {
+    max-width: min(100%, 58px) !important;
+  }
+
+  .about-artist__inner {
+    width: min(100%, 620px) !important;
+    max-width: calc(100vw - 48px) !important;
+  }
+
+  .about-artist__visual {
+    width: min(100%, 560px) !important;
+  }
+
+  .about-artist__text {
+    max-width: min(100%, 32em) !important;
+  }
+}
+
+@media (max-width: 540px) {
+  .works-logo-grid {
+    width: min(100%, 300px) !important;
+  }
+
+  .works-logo-grid__row,
+  .works-logo-grid__row--top,
+  .works-logo-grid__row--bottom {
+    gap: 14px 18px !important;
+  }
+
+  .works-logo-grid figure,
+  .works-logo-grid__row figure,
+  .works-logo-grid__row--top figure,
+  .works-logo-grid__row--bottom figure {
+    max-width: 132px !important;
+    min-height: 44px !important;
+  }
+
+  .works-logo-grid img,
+  .works-logo-grid__row img,
+  .works-logo-grid__row--top img,
+  .works-logo-grid__row--bottom img {
+    max-width: min(100%, 82px) !important;
+    max-height: 38px !important;
+  }
+
+  .works-logo-grid__row--bottom figure:nth-child(2) img {
+    max-width: min(100%, 92px) !important;
+  }
+
+  .works-logo-grid__row--bottom figure:nth-child(3) img {
+    max-width: min(100%, 96px) !important;
+  }
+
+  .works-logo-grid__row--bottom figure:nth-child(4) img {
+    max-width: min(100%, 54px) !important;
+  }
+
+  .about-artist__inner {
+    width: min(100%, 360px) !important;
+    max-width: calc(100vw - 44px) !important;
+    padding-inline: 0 !important;
+  }
+
+  .about-artist__visual {
+    width: 100% !important;
+    margin-top: 56px !important;
+  }
+
+  .about-artist__image--main {
+    left: 0 !important;
+    width: 75% !important;
+  }
+
+  .about-artist__image--sub {
+    right: 0 !important;
+    width: 68% !important;
+  }
+
+  .about-artist__text {
+    max-width: 22em !important;
+  }
+
+  .about-artist__text p {
+    font-size: 16px !important;
+    line-height: 1.95 !important;
+  }
+}
+
+/* 2026-08-10: final stability for works logos and about section on tablet/SP */
+@media (max-width: 1024px) {
+  .works-logo-grid {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    width: min(100%, 620px) !important;
+    max-width: calc(100vw - 48px) !important;
+    margin-inline: auto !important;
+    gap: 22px !important;
+  }
+
+  .works-logo-grid__row,
+  .works-logo-grid__row--top,
+  .works-logo-grid__row--bottom {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    align-items: center !important;
+    justify-content: center !important;
+    justify-items: center !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-inline: auto !important;
+    padding-bottom: 0 !important;
+    gap: 20px 34px !important;
+  }
+
+  .works-logo-grid figure,
+  .works-logo-grid__row figure,
+  .works-logo-grid__row--top figure,
+  .works-logo-grid__row--bottom figure {
+    display: grid !important;
+    place-items: center !important;
+    width: 100% !important;
+    max-width: 180px !important;
+    min-width: 0 !important;
+    min-height: 56px !important;
+    margin: 0 !important;
+  }
+
+  .works-logo-grid img,
+  .works-logo-grid__row img,
+  .works-logo-grid__row--top img,
+  .works-logo-grid__row--bottom img {
+    display: block !important;
+    width: auto !important;
+    max-width: min(100%, 118px) !important;
+    max-height: 52px !important;
+    object-fit: contain !important;
+  }
+
+  .works-logo-grid__row--top figure:nth-child(1) img,
+  .works-logo-grid__row--top figure:nth-child(2) img {
+    max-width: min(100%, 136px) !important;
+    max-height: 54px !important;
+  }
+
+  .works-logo-grid__row--top figure:nth-child(4) img {
+    max-width: min(100%, 112px) !important;
+  }
+
+  .works-logo-grid__row--bottom figure:nth-child(2) img,
+  .works-logo-grid__row--bottom figure:nth-child(3) img {
+    max-width: min(100%, 138px) !important;
+  }
+
+  .works-logo-grid__row--bottom figure:nth-child(4) img {
+    max-width: min(100%, 62px) !important;
+    max-height: 58px !important;
+  }
+
+  .about-artist {
+    overflow-x: clip !important;
+  }
+
+  .about-artist__inner {
+    grid-template-columns: 1fr !important;
+    justify-items: center !important;
+    width: min(100%, 760px) !important;
+    max-width: calc(100vw - 48px) !important;
+    margin-inline: auto !important;
+    padding-inline: 0 !important;
+    gap: clamp(58px, 8vw, 100px) !important;
+  }
+
+  .about-artist__visual {
+    width: min(100%, 680px) !important;
+    max-width: 100% !important;
+    margin: 70px auto 0 !important;
+  }
+
+  .about-artist__text {
+    width: 100% !important;
+    max-width: min(100%, 36em) !important;
+    margin-inline: auto !important;
+    padding-inline: 0 !important;
+    text-align: left !important;
+  }
+
+  .about-artist__text p {
+    max-width: 100% !important;
+    margin-inline: 0 !important;
+    line-height: 1.95 !important;
+    letter-spacing: 0 !important;
+    text-align: left !important;
+    line-break: strict !important;
+    word-break: normal !important;
+    overflow-wrap: break-word !important;
+  }
+}
+
+@media (max-width: 720px) {
+  .works-logo-grid {
+    width: min(100%, 420px) !important;
+    max-width: calc(100vw - 40px) !important;
+    gap: 16px !important;
+  }
+
+  .works-logo-grid__row,
+  .works-logo-grid__row--top,
+  .works-logo-grid__row--bottom {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 16px 22px !important;
+  }
+
+  .works-logo-grid figure,
+  .works-logo-grid__row figure,
+  .works-logo-grid__row--top figure,
+  .works-logo-grid__row--bottom figure {
+    max-width: 148px !important;
+    min-height: 50px !important;
+  }
+
+  .works-logo-grid img,
+  .works-logo-grid__row img,
+  .works-logo-grid__row--top img,
+  .works-logo-grid__row--bottom img {
+    max-width: min(100%, 100px) !important;
+    max-height: 46px !important;
+  }
+
+  .works-logo-grid__row--top figure:nth-child(1) img,
+  .works-logo-grid__row--top figure:nth-child(2) img {
+    max-width: min(100%, 112px) !important;
+  }
+
+  .works-logo-grid__row--top figure:nth-child(4) img {
+    max-width: min(100%, 96px) !important;
+  }
+
+  .works-logo-grid__row--bottom figure:nth-child(2) img,
+  .works-logo-grid__row--bottom figure:nth-child(3) img {
+    max-width: min(100%, 118px) !important;
+  }
+
+  .works-logo-grid__row--bottom figure:nth-child(4) img {
+    max-width: min(100%, 56px) !important;
+  }
+
+  .about-artist__inner {
+    width: min(100%, 380px) !important;
+    max-width: calc(100vw - 40px) !important;
+  }
+
+  .about-artist__visual {
+    width: 100% !important;
+    min-height: clamp(300px, 78vw, 380px) !important;
+    margin-top: 50px !important;
+  }
+
+  .about-artist__image--main {
+    left: 0 !important;
+    width: 74% !important;
+  }
+
+  .about-artist__image--sub {
+    right: 0 !important;
+    width: 70% !important;
+  }
+
+  .about-artist__text {
+    max-width: 21em !important;
+  }
+
+  .about-artist__text p {
+    font-size: 16px !important;
+    line-height: 1.95 !important;
+  }
+}
+
+@media (max-width: 540px) {
+  .works-logo-grid {
+    width: min(100%, 320px) !important;
+    max-width: calc(100vw - 34px) !important;
+    gap: 14px !important;
+  }
+
+  .works-logo-grid__row,
+  .works-logo-grid__row--top,
+  .works-logo-grid__row--bottom {
+    gap: 14px 18px !important;
+  }
+
+  .works-logo-grid figure,
+  .works-logo-grid__row figure,
+  .works-logo-grid__row--top figure,
+  .works-logo-grid__row--bottom figure {
+    max-width: 140px !important;
+    min-height: 46px !important;
+  }
+
+  .works-logo-grid img,
+  .works-logo-grid__row img,
+  .works-logo-grid__row--top img,
+  .works-logo-grid__row--bottom img {
+    max-width: min(100%, 88px) !important;
+    max-height: 40px !important;
+  }
+
+  .works-logo-grid__row--top figure:nth-child(1) img,
+  .works-logo-grid__row--top figure:nth-child(2) img {
+    max-width: min(100%, 96px) !important;
+  }
+
+  .works-logo-grid__row--top figure:nth-child(4) img {
+    max-width: min(100%, 86px) !important;
+  }
+
+  .works-logo-grid__row--bottom figure:nth-child(2) img,
+  .works-logo-grid__row--bottom figure:nth-child(3) img {
+    max-width: min(100%, 98px) !important;
+  }
+
+  .works-logo-grid__row--bottom figure:nth-child(4) img {
+    max-width: min(100%, 52px) !important;
+  }
+
+  .about-artist__inner {
+    width: min(100%, 360px) !important;
+    max-width: calc(100vw - 44px) !important;
+  }
+
+  .about-artist__text {
+    max-width: 22em !important;
+  }
+}
+
+/* 2026-08-10: works logo alignment for PC/tablet and point 03 paragraph wrap */
+@media (min-width: 721px) {
+  .works-logo-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: min(720px, 58vw) !important;
+    max-width: 100% !important;
+    margin: clamp(48px, 5vw, 72px) auto 0 !important;
+    gap: clamp(30px, 4vw, 48px) !important;
+  }
+
+  .works-logo-grid__row,
+  .works-logo-grid__row--top,
+  .works-logo-grid__row--bottom {
+    display: grid !important;
+    grid-template-columns: repeat(4, minmax(82px, 1fr)) !important;
+    align-items: center !important;
+    justify-items: center !important;
+    width: 100% !important;
+    gap: clamp(22px, 3.4vw, 54px) !important;
+    padding-bottom: 0 !important;
+  }
+
+  .works-logo-grid figure,
+  .works-logo-grid__row figure,
+  .works-logo-grid__row--top figure,
+  .works-logo-grid__row--bottom figure {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    max-width: 136px !important;
+    min-height: 64px !important;
+  }
+
+  .works-logo-grid img,
+  .works-logo-grid__row img,
+  .works-logo-grid__row--top img,
+  .works-logo-grid__row--bottom img {
+    width: auto !important;
+    max-width: min(100%, 112px) !important;
+    max-height: 58px !important;
+    object-fit: contain !important;
+  }
+
+  .works-logo-grid__row--top figure:nth-child(1) img,
+  .works-logo-grid__row--top figure:nth-child(2) img {
+    max-width: min(100%, 118px) !important;
+  }
+
+  .works-logo-grid__row--top figure:nth-child(4) img {
+    max-width: min(100%, 106px) !important;
+  }
+
+  .works-logo-grid__row--bottom figure:nth-child(2) img,
+  .works-logo-grid__row--bottom figure:nth-child(3) img {
+    max-width: min(100%, 126px) !important;
+  }
+
+  .works-logo-grid__row--bottom figure:nth-child(4) img {
+    max-width: min(100%, 64px) !important;
+    max-height: 64px !important;
+  }
+}
+
+@media (min-width: 721px) and (max-width: 1180px) {
+  .works-logo-grid {
+    width: min(680px, 58vw) !important;
+    gap: 34px !important;
+  }
+
+  .works-logo-grid__row,
+  .works-logo-grid__row--top,
+  .works-logo-grid__row--bottom {
+    grid-template-columns: repeat(4, minmax(72px, 1fr)) !important;
+    gap: clamp(14px, 2.4vw, 34px) !important;
+  }
+
+  .works-logo-grid figure,
+  .works-logo-grid__row figure,
+  .works-logo-grid__row--top figure,
+  .works-logo-grid__row--bottom figure {
+    max-width: 118px !important;
+    min-height: 56px !important;
+  }
+
+  .works-logo-grid img,
+  .works-logo-grid__row img,
+  .works-logo-grid__row--top img,
+  .works-logo-grid__row--bottom img {
+    max-width: min(100%, 96px) !important;
+    max-height: 48px !important;
+  }
+
+  .works-logo-grid__row--top figure:nth-child(1) img,
+  .works-logo-grid__row--top figure:nth-child(2) img,
+  .works-logo-grid__row--top figure:nth-child(4) img {
+    max-width: min(100%, 98px) !important;
+  }
+
+  .works-logo-grid__row--bottom figure:nth-child(2) img,
+  .works-logo-grid__row--bottom figure:nth-child(3) img {
+    max-width: min(100%, 108px) !important;
+  }
+}
+
+@media (min-width: 1025px) {
+  .point-list .point-item:nth-child(3) .point-item__text p {
+    max-width: 600px !important;
+    line-height: 2 !important;
+    text-align: left !important;
+    text-wrap: pretty;
+    line-break: strict;
+    word-break: normal;
+    overflow-wrap: break-word;
+  }
+}
+
+/* 2026-08-10: enlarge the first two works logos while preserving the grid */
+@media (min-width: 1025px) {
+  .works-logo-grid__row--top {
+    gap: clamp(28px, 3.2vw, 58px) !important;
+  }
+
+  .works-logo-grid__row--top figure:nth-child(1) {
+    max-width: 198px !important;
+    min-height: 104px !important;
+  }
+
+  .works-logo-grid__row--top figure:nth-child(2) {
+    max-width: 184px !important;
+    min-height: 96px !important;
+  }
+
+  .works-logo-grid__row--top figure:nth-child(1) img {
+    max-width: min(100%, 190px) !important;
+    max-height: 100px !important;
+    transform: scale(1.34) !important;
+  }
+
+  .works-logo-grid__row--top figure:nth-child(2) img {
+    max-width: min(100%, 164px) !important;
+    max-height: 86px !important;
+    transform: scale(1.18) !important;
+  }
+}
+
+@media (min-width: 721px) and (max-width: 1024px) {
+  .works-logo-grid__row--top {
+    gap: 22px 32px !important;
+  }
+
+  .works-logo-grid__row--top figure:nth-child(1) {
+    max-width: 214px !important;
+    min-height: 90px !important;
+  }
+
+  .works-logo-grid__row--top figure:nth-child(2) {
+    max-width: 206px !important;
+    min-height: 82px !important;
+  }
+
+  .works-logo-grid__row--top figure:nth-child(1) img {
+    max-width: min(100%, 204px) !important;
+    max-height: 88px !important;
+    transform: scale(1.28) !important;
+  }
+
+  .works-logo-grid__row--top figure:nth-child(2) img {
+    max-width: min(100%, 176px) !important;
+    max-height: 78px !important;
+    transform: scale(1.16) !important;
+  }
+}
+
+@media (max-width: 720px) {
+  .works-logo-grid__row--top {
+    gap: 18px 24px !important;
+  }
+
+  .works-logo-grid__row--top figure:nth-child(1) {
+    max-width: 176px !important;
+    min-height: 76px !important;
+  }
+
+  .works-logo-grid__row--top figure:nth-child(2) {
+    max-width: 170px !important;
+    min-height: 70px !important;
+  }
+
+  .works-logo-grid__row--top figure:nth-child(1) img {
+    max-width: min(100%, 162px) !important;
+    max-height: 74px !important;
+    transform: scale(1.24) !important;
+  }
+
+  .works-logo-grid__row--top figure:nth-child(2) img {
+    max-width: min(100%, 144px) !important;
+    max-height: 66px !important;
+    transform: scale(1.16) !important;
+  }
+}
+
+@media (max-width: 540px) {
+  .works-logo-grid__row--top {
+    gap: 16px 20px !important;
+  }
+
+  .works-logo-grid__row--top figure:nth-child(1) {
+    max-width: 154px !important;
+    min-height: 66px !important;
+  }
+
+  .works-logo-grid__row--top figure:nth-child(2) {
+    max-width: 150px !important;
+    min-height: 62px !important;
+  }
+
+  .works-logo-grid__row--top figure:nth-child(1) img {
+    max-width: min(100%, 138px) !important;
+    max-height: 64px !important;
+    transform: scale(1.36) !important;
+  }
+
+  .works-logo-grid__row--top figure:nth-child(2) img {
+    max-width: min(100%, 130px) !important;
+    max-height: 62px !important;
+    transform: scale(1.3) !important;
+  }
+}
+
+/* 2026-08-10: enlarge JR and Nippon TV works logos */
+@media (min-width: 1025px) {
+  .works-logo-grid__row--top figure:nth-child(3),
+  .works-logo-grid__row--bottom figure:nth-child(1) {
+    max-width: 156px !important;
+    min-height: 84px !important;
+  }
+
+  .works-logo-grid__row--top figure:nth-child(3) img {
+    max-width: min(100%, 144px) !important;
+    max-height: 78px !important;
+    transform: scale(1.2) !important;
+  }
+
+  .works-logo-grid__row--bottom figure:nth-child(1) img {
+    max-width: min(100%, 136px) !important;
+    max-height: 74px !important;
+    transform: scale(1.18) !important;
+  }
+}
+
+@media (min-width: 721px) and (max-width: 1024px) {
+  .works-logo-grid__row--top figure:nth-child(3),
+  .works-logo-grid__row--bottom figure:nth-child(1) {
+    max-width: 172px !important;
+    min-height: 72px !important;
+  }
+
+  .works-logo-grid__row--top figure:nth-child(3) img {
+    max-width: min(100%, 154px) !important;
+    max-height: 66px !important;
+    transform: scale(1.18) !important;
+  }
+
+  .works-logo-grid__row--bottom figure:nth-child(1) img {
+    max-width: min(100%, 146px) !important;
+    max-height: 62px !important;
+    transform: scale(1.16) !important;
+  }
+}
+
+@media (max-width: 720px) {
+  .works-logo-grid__row--top figure:nth-child(3),
+  .works-logo-grid__row--bottom figure:nth-child(1) {
+    max-width: 154px !important;
+    min-height: 64px !important;
+  }
+
+  .works-logo-grid__row--top figure:nth-child(3) img {
+    max-width: min(100%, 134px) !important;
+    max-height: 58px !important;
+    transform: scale(1.18) !important;
+  }
+
+  .works-logo-grid__row--bottom figure:nth-child(1) img {
+    max-width: min(100%, 128px) !important;
+    max-height: 56px !important;
+    transform: scale(1.16) !important;
+  }
+}
+
+@media (max-width: 540px) {
+  .works-logo-grid__row--top figure:nth-child(3),
+  .works-logo-grid__row--bottom figure:nth-child(1) {
+    max-width: 142px !important;
+    min-height: 58px !important;
+  }
+
+  .works-logo-grid__row--top figure:nth-child(3) img {
+    max-width: min(100%, 122px) !important;
+    max-height: 54px !important;
+    transform: scale(1.16) !important;
+  }
+
+  .works-logo-grid__row--bottom figure:nth-child(1) img {
+    max-width: min(100%, 116px) !important;
+    max-height: 50px !important;
+    transform: scale(1.14) !important;
+  }
+}
+
+/* 2026-08-10: natural mobile line breaks for paragraph copy */
+@media (max-width: 540px) {
+  main p {
+    line-break: strict;
+    word-break: auto-phrase;
+    overflow-wrap: break-word;
+    text-wrap: pretty;
+  }
+
+  .fv__text {
+    max-width: 18.5em;
+  }
+
+  .case-item p {
+    max-width: 17.5em;
+    margin-inline: auto;
+  }
+
+  .point-item__text p {
+    width: 100% !important;
+    max-width: none !important;
+    margin-inline: 0 !important;
+    word-break: auto-phrase !important;
+    line-break: strict !important;
+    overflow-wrap: normal !important;
+    text-align: left !important;
+  }
+
+  .about-artist__text p {
+    max-width: 21em !important;
+    margin-inline: auto !important;
+  }
+
+  .solution__box p {
+    max-width: 19em;
+    margin-inline: auto;
+  }
+
+  .price-card__note,
+  .price-note {
+    max-width: 20em;
+    margin-inline: auto;
+  }
+
+  .staff-card__text {
+    width: auto;
+    max-width: none;
+    margin: 12px 0 0 var(--staff-card-inset) !important;
+    word-break: auto-phrase !important;
+    line-break: strict !important;
+    overflow-wrap: break-word !important;
+    text-align: left;
+  }
+
+  .staff-copy-break {
+    display: block;
+  }
+
+  .voice-card__body p {
+    max-width: 18.5em;
+    margin-inline: auto;
+    word-break: auto-phrase !important;
+    line-break: strict !important;
+  }
+
+  .flow-item p {
+    max-width: 13.5em;
+    margin-inline: auto;
+  }
+
+  .faq-question p,
+  .faq-answer p {
+    max-width: 19em;
+  }
+
+  .works-section__note {
+    max-width: 18em;
+    margin-inline: auto;
+  }
+
+  .final-cta__box p {
+    max-width: 18em;
+    margin-inline: auto;
   }
 }

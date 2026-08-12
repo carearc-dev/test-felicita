@@ -6008,3 +6008,43 @@ body {
     padding: 22px 20px !important;
   }
 }
+
+@media (min-width: 1025px) and (max-width: 1180px) {
+  .staff-slider-wrap,
+  .voice-slider-wrap {
+    width: min(calc(100% - 96px), 980px) !important;
+  }
+
+  .staff-card {
+    --staff-card-inset: 28px;
+    min-height: 0 !important;
+    padding-bottom: 24px !important;
+  }
+
+  .staff-card .image-frame {
+    margin-top: 22px !important;
+  }
+
+  .staff-card__role {
+    margin-top: 20px !important;
+  }
+
+  .staff-card__text {
+    font-size: 14px !important;
+    line-height: 1.75 !important;
+  }
+
+  .voice-card {
+    min-height: 0 !important;
+    padding: 26px 20px 24px !important;
+  }
+
+  .voice-card__body {
+    padding: 24px 22px !important;
+  }
+
+  .voice-card__body p {
+    font-size: 14px !important;
+    line-height: 1.78 !important;
+  }
+}

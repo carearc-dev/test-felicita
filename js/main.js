@@ -116,7 +116,7 @@ if (staffList) {
           slidesPerView: 2.2,
           spaceBetween: 24
         },
-        980: {
+        1181: {
           slidesPerView: 3,
           spaceBetween: 34
         }
@@ -149,7 +149,7 @@ if (voiceSwiperEl && typeof Swiper !== "undefined") {
         slidesPerView: 2.2,
         spaceBetween: 24
       },
-      980: {
+      1181: {
         slidesPerView: 3,
         spaceBetween: 34
       }

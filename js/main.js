@@ -66,6 +66,12 @@ if (menuButton && nav) {
 
 if (staffList) {
   const data = Array.isArray(window.staffData) ? window.staffData : (typeof staffData !== "undefined" ? staffData : []);
+  const staffSliderWrap = staffList.closest(".staff-slider-wrap");
+  const hasPcStaffSlider = data.length > 3;
+
+  if (staffSliderWrap) {
+    staffSliderWrap.classList.toggle("is-slider-enabled", hasPcStaffSlider);
+  }
 
   if (data.length) {
     staffList.innerHTML = data.map((staff) => `
@@ -92,7 +98,7 @@ if (staffList) {
 
   if (typeof Swiper !== "undefined" && data.length) {
     new Swiper(".staff-swiper", {
-      loop: data.length > 3,
+      loop: hasPcStaffSlider,
       watchOverflow: true,
       keyboard: { enabled: true },
       slidesPerView: 1.15,
@@ -106,7 +112,7 @@ if (staffList) {
         prevEl: ".slider-arrow--prev"
       },
       breakpoints: {
-        720: {
+        821: {
           slidesPerView: 2.2,
           spaceBetween: 24
         },
@@ -139,7 +145,7 @@ if (voiceSwiperEl && typeof Swiper !== "undefined") {
       prevEl: ".voice-arrow--prev"
     },
     breakpoints: {
-      720: {
+      821: {
         slidesPerView: 2.2,
         spaceBetween: 24
       },
